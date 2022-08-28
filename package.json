@@ -3,10 +3,11 @@
   "version": "1.1.1",
   "description": "A game about retrieving water for a plant.",
   "private": true,
+  "environment": "development",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build.js",
-    "build:electron": "npx electron-builder --projectDir dist/ --win portable"
+    "build:electron": "node build-electron.js"
   },
   "keywords": [
     "kenneyjam2022",
@@ -26,6 +27,7 @@
     "style-loader": "^3.3.1"
   },
   "build": {
+    "productName": "The Very Thirsty Plant and the Labrynith of Ghosts",
     "appId": "io.marmadilemanteater.theverythirstyplant",
     "mac": {
       "category": "your.app.category.type"
