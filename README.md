@@ -7,10 +7,7 @@ This was developed using [webpack](https://github.com/webpack/webpack), [knockou
 
 #
 
-<img width="200" src="https://img.itch.zone/aW1hZ2UvMTY3MTMxNS85ODQxMjI1LnBuZw==/original/EBu4cV.png" /> 
-<img width="200" src="https://img.itch.zone/aW1hZ2UvMTY3MTMxNS85ODkyMzY1LnBuZw==/original/SzY2LF.png" />
-<img width="200" src="https://img.itch.zone/aW1hZ2UvMTY3MTMxNS85ODkyMzc0LnBuZw==/347x500/jrAkdv.png" />
-<img width="200" src="https://img.itch.zone/aW1hZ2UvMTY3MTMxNS85ODkyMzc3LnBuZw==/347x500/JGFqJy.png" />
+<img width="200" src="https://img.itch.zone/aW1hZ2UvMTY3MTMxNS85ODQxMjI1LnBuZw==/original/EBu4cV.png" /> <img width="200" src="https://img.itch.zone/aW1hZ2UvMTY3MTMxNS85ODkyMzY1LnBuZw==/original/SzY2LF.png" /> <img width="200" src="https://img.itch.zone/aW1hZ2UvMTY3MTMxNS85ODkyMzc0LnBuZw==/347x500/jrAkdv.png" /> <img width="200" src="https://img.itch.zone/aW1hZ2UvMTY3MTMxNS85ODkyMzc3LnBuZw==/347x500/JGFqJy.png" />
 
 #
 
