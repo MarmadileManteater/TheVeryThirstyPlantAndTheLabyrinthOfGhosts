@@ -16,4 +16,4 @@ This is a game about retrieving water for a plant. Unfortunately, the water does
 Ghosts knock you back when you get too close to them, but beware, if they push you against a wall with enough force, you will die.
 
 
-[Play on itch.io](https://marmadilemanteater.itch.io/the-very-thirsty-plant-the-labrynth-of-ghosts)
+[Play on itch.io](https://marmadilemanteater.itch.io/the-very-thirsty-plant-the-labyrinth-of-ghosts)
