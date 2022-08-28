@@ -27,69 +27,69 @@ jobs:
       - name: Set environment to production
         run: node ./set-environment.js production
 
-    - name: Get Version Number
-      uses: nyaayaya/package-version@v1
-      with:
-        path: 'package.json'
-        follow-symlinks: false
+      - name: Get Version Number
+        uses: nyaayaya/package-version@v1
+        with:
+          path: 'package.json'
+          follow-symlinks: false
 
-    - name: Create release body
-      run: |
-        echo "Latest Commit Message: ${{ github.event.head_commit.message }}" >> release.txt
+      - name: Create release body
+        run: |
+          echo "Latest Commit Message: ${{ github.event.head_commit.message }}" >> release.txt
 
-    - name: Create draft release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ env.PACKAGE_VERSION }}-${{ github.run_number }}
-        release_name: ${{ env.PACKAGE_VERSION }}-${{ github.run_number }}
-        draft: true
-        prerelease: false
-        body_path: release.txt
+      - name: Create draft release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.PACKAGE_VERSION }}-${{ github.run_number }}
+          release_name: ${{ env.PACKAGE_VERSION }}-${{ github.run_number }}
+          draft: true
+          prerelease: false
+          body_path: release.txt
 
-    - name: Webpack
-      run: npm run build
-      
-    - name: Zip Release
-      uses: vimtor/action-zip@v1
-      with:
-        files: dist/
-        dest: release.zip
-    
-    - name: Upload HTML5 artifact to release
-      uses: actions/upload-release-asset@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: release.zip
-        asset_name: TheVeryThirsyPlantAndTheLabyrinthOfGhosts.${{ env.PACKAGE_VERSION }}-${{ github.run_number }}-HTML5.zip
-        asset_content_type: application/zip
+      - name: Webpack
+        run: npm run build
 
-    - name: Copy the node_modules for electron-builder
-      run: cp -r .\node_modules\ .\dist
+      - name: Zip Release
+        uses: vimtor/action-zip@v1
+        with:
+          files: dist/
+          dest: release.zip
 
-    - name: Save the signing key into storage
-      run: 
-        echo "${{ secrets.KEY_PFX }}" >> key.pfx.asc
-    
-    - name: Decode the base64 encoded key
-      shell: powershell
-      run: |
-        $decoded = [System.Convert]::FromBase64String($(Get-Content -Path 'key.pfx.asc' -Raw))
-        Set-Content key.pfx -Value $decoded -Encoding Byte
+      - name: Upload HTML5 artifact to release
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: release.zip
+          asset_name: TheVeryThirsyPlantAndTheLabyrinthOfGhosts.${{ env.PACKAGE_VERSION }}-${{ github.run_number }}-HTML5.zip
+          asset_content_type: application/zip
 
-    - name: Build the standalone Windows executable
-      run: npm run build:electron production ./key.pfx ${{ secrets.KEY_PFX_PASSWORD }}
-    
-    - name: Upload Nuget artifact to release
-      uses: actions/upload-release-asset@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: dist/dist/The Very Thirsty Plant and the Labrynith of Ghosts ${{ env.PACKAGE_VERSION }}.exe
-        asset_name: The Very Thirsty Plant and the Labrynith of Ghosts ${{ env.PACKAGE_VERSION }}-${{ github.run_number }}.exe
-        asset_content_type: application/octet-stream
+      - name: Copy the node_modules for electron-builder
+        run: cp -r .\node_modules\ .\dist
+
+      - name: Save the signing key into storage
+        run: 
+          echo "${{ secrets.KEY_PFX }}" >> key.pfx.asc
+
+      - name: Decode the base64 encoded key
+        shell: powershell
+        run: |
+          $decoded = [System.Convert]::FromBase64String($(Get-Content -Path 'key.pfx.asc' -Raw))
+          Set-Content key.pfx -Value $decoded -Encoding Byte
+
+      - name: Build the standalone Windows executable
+        run: npm run build:electron production ./key.pfx ${{ secrets.KEY_PFX_PASSWORD }}
+
+      - name: Upload Nuget artifact to release
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: dist/dist/The Very Thirsty Plant and the Labrynith of Ghosts ${{ env.PACKAGE_VERSION }}.exe
+          asset_name: The Very Thirsty Plant and the Labrynith of Ghosts ${{ env.PACKAGE_VERSION }}-${{ github.run_number }}.exe
+          asset_content_type: application/octet-stream
