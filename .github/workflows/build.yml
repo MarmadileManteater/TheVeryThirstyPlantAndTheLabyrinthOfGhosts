@@ -33,6 +33,9 @@ jobs:
           name: TheVeryThirstyPlantAndTheLabyrinthOfGhosts-development-${{ github.run_number }}-HTML5
           path: dist
         
+      - name: Copy the node_modules for electron-builder
+        run: cp -r .\node_modules\ .\dist
+
       - name: Build the standalone Windows executable
         run: npm run build:electron
 

@@ -17,6 +17,6 @@ fs.copyFileSync(src, dst)
 fs.copyFileSync('package.json', 'dist/package.json')
 let newContent = fs.readFileSync('src/electron/index.js').toString().replace('../../dist/index.html', 'index.html')
 fs.writeFileSync('dist/index.js', newContent)
-fse.copySync('node_modules', 'dist/node_modules')
+
 fs.mkdirSync('dist/build')
 fs.copyFileSync('the-very-thirsty-plant-icon.ico', 'dist/build/icon.ico')
