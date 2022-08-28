@@ -27,7 +27,7 @@
     "style-loader": "^3.3.1"
   },
   "build": {
-    "productName": "The Very Thirsty Plant and the Labrynith of Ghosts",
+    "productName": "The Very Thirsty Plant and the Labyrinth of Ghosts",
     "appId": "io.marmadilemanteater.theverythirstyplant",
     "mac": {
       "category": "your.app.category.type"
