@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="2">
+ <properties>
+  <property name="audio" value="snow_city"/>
+  <property name="color" value="7"/>
+  <property name="shade" value="brown"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/kenney_monochromerpg_tilemap_packed.tsx"/>
+ <tileset firstgid="137" source="../tilesets/kenney_rpgurbanpack_tilemap_packed_monochrome.tsx"/>
+ <layer id="1" name="Ground" width="10" height="10">
+  <data encoding="csv">
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26,
+26,26,26,26,26,26,26,26,26,26
+</data>
+ </layer>
+ <layer id="2" name="Hills" width="10" height="10">
+  <data encoding="csv">
+142,192,192,192,192,192,192,192,192,143,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+169,138,138,138,138,138,138,138,138,170
+</data>
+ </layer>
+ <layer id="3" name="Exit" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,463,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="6" name="top" width="10" height="10">
+  <data encoding="csv">
+142,192,192,192,192,192,192,192,192,143,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+166,0,0,0,0,0,0,0,0,164,
+169,138,138,138,138,138,138,138,138,170
+</data>
+ </layer>
+ <objectgroup id="4" name="Max Health">
+  <object id="1" gid="130" x="48" y="64" width="16" height="16">
+   <properties>
+    <property name="healing" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

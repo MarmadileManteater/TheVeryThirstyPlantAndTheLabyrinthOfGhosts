@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="7">
+ <editorsettings>
+  <export target="area9.tmx" format="tmx"/>
+ </editorsettings>
+ <properties>
+  <property name="audio" value="Forest"/>
+  <property name="color" value="7"/>
+  <property name="entrance" value="north"/>
+  <property name="exit" value="east"/>
+  <property name="shade" value="red"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/kenney_monochromerpg_tilemap_packed.tsx"/>
+ <layer id="1" name="Grass" width="10" height="10">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,8,9,9,9,9,9,10,1,1,
+1,25,26,26,26,26,26,27,1,1,
+1,25,26,26,26,26,26,27,1,1,
+1,25,26,26,26,26,26,27,1,1,
+1,25,26,26,26,26,26,27,1,1,
+1,25,26,26,26,26,26,27,1,1,
+1,42,43,43,43,43,43,44,1,1,
+1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer id="2" name="Trees" width="10" height="10">
+  <data encoding="csv">
+29,29,29,0,0,0,0,29,29,29,
+29,47,46,0,0,0,0,46,45,29,
+29,0,0,0,0,0,0,0,28,29,
+29,0,0,0,0,0,0,0,0,46,
+29,0,0,0,0,0,0,0,0,0,
+29,0,0,0,0,0,0,0,0,0,
+29,0,0,0,0,0,0,0,0,0,
+29,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,29,29,29,29,29,29,29,29,29
+</data>
+ </layer>
+ <layer id="8" name="Hills" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,68,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,67,0,67,0,66,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,65,0,67,0,67,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,67,0,67,0,66,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="top" width="10" height="10">
+  <data encoding="csv">
+29,29,29,30,0,0,28,29,29,29,
+29,0,0,0,0,0,0,0,0,29,
+29,30,0,0,0,0,0,0,28,29,
+29,30,0,0,0,0,0,0,0,0,
+29,30,0,0,0,0,0,0,0,0,
+29,30,0,0,0,0,0,0,0,0,
+29,30,0,0,0,0,0,0,0,12,
+29,30,0,0,0,0,0,0,28,29,
+29,13,12,12,12,12,12,12,11,29,
+29,29,29,29,29,29,29,29,29,29
+</data>
+ </layer>
+ <objectgroup id="6" name="Water"/>
+ <objectgroup id="7" name="Enemies">
+  <object id="4" gid="126" x="83.375" y="132.25" width="16" height="16">
+   <properties>
+    <property name="hostile" value="true"/>
+    <property name="onPlayerLookAt" value="stop"/>
+    <property name="onPlayerLookAway" value="go"/>
+    <property name="speed" value="0.2"/>
+    <property name="state" value="active"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

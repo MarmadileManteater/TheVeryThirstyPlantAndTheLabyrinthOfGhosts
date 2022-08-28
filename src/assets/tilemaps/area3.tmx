@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="7">
+ <editorsettings>
+  <export target="area6..tmx" format="tmx"/>
+ </editorsettings>
+ <properties>
+  <property name="audio" value="Forest"/>
+  <property name="color" value="7"/>
+  <property name="entrance" value="west"/>
+  <property name="exit" value="none"/>
+  <property name="shade" value="red"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/kenney_monochromerpg_tilemap_packed.tsx"/>
+ <layer id="1" name="Grass" width="10" height="10">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+29,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,59,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+29,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer id="2" name="Trees" width="10" height="10">
+  <data encoding="csv">
+29,29,29,29,29,29,29,29,29,29,
+29,47,46,46,46,46,46,46,45,29,
+29,0,0,0,0,0,0,0,0,29,
+46,0,0,0,0,0,0,0,0,29,
+0,0,0,0,0,0,0,0,28,29,
+0,0,0,0,0,0,0,0,0,29,
+0,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,29,29,29,29,29,29,29,29,29
+</data>
+ </layer>
+ <layer id="8" name="Hills" width="10" height="10">
+  <data encoding="csv">
+0,0,19,20,20,20,21,0,0,0,
+0,0,36,37,37,37,38,0,0,0,
+0,0,0,0,56,0,0,0,0,0,
+0,0,0,0,56,0,0,0,0,0,
+0,0,0,0,74,73,0,73,73,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="top" width="10" height="10">
+  <data encoding="csv">
+29,29,0,0,0,0,0,29,29,29,
+29,0,0,0,0,0,0,0,0,29,
+29,30,0,0,0,0,0,0,28,29,
+0,0,0,0,0,0,0,0,28,29,
+0,0,0,0,0,0,0,0,28,29,
+0,0,0,0,0,0,0,0,28,29,
+12,0,0,0,0,0,0,0,28,29,
+29,30,0,0,0,0,0,0,28,29,
+29,13,12,12,12,12,12,12,11,29,
+29,29,29,29,29,29,29,29,29,29
+</data>
+ </layer>
+ <objectgroup id="6" name="Water">
+  <object id="1" gid="136" x="115.25" y="45.5" width="16" height="16">
+   <properties>
+    <property name="collideSoundEffect" value="Punch2__002"/>
+    <property name="trigger" value="giveWater,selfDestruct"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="Enemies">
+  <object id="4" gid="126" x="97.625" y="57" width="16" height="16">
+   <properties>
+    <property name="hostile" value="true"/>
+    <property name="onPlayerLookAt" value="stop"/>
+    <property name="onPlayerLookAway" value="go"/>
+    <property name="speed" value="0.2"/>
+    <property name="state" value="active"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

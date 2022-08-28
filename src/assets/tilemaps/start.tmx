@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="17">
+ <properties>
+  <property name="audio" value="snow_city"/>
+  <property name="color" value="7"/>
+  <property name="shade" value="#88c16e"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/kenney_monochromerpg_tilemap_packed.tsx"/>
+ <tileset firstgid="137" source="../tilesets/kenney_rpgurbanpack_tilemap_packed_monochrome.tsx"/>
+ <layer id="3" name="Grass" width="10" height="10">
+  <data encoding="csv">
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20,
+20,20,20,20,20,20,20,20,20,20
+</data>
+ </layer>
+ <layer id="13" name="Shadows" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,135,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="1" name="Hills" width="10" height="10">
+  <data encoding="csv">
+0,19,0,0,0,0,0,0,21,0,
+0,36,37,37,37,37,37,37,38,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="Trees" width="10" height="10" visible="0">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+12,0,0,0,0,0,0,0,0,12,
+29,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,0,0,0,0,0,0,0,0,29,
+29,29,29,0,0,0,0,29,29,29
+</data>
+ </layer>
+ <layer id="10" name="top" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+29,30,0,0,0,0,0,0,28,29,
+29,30,0,0,0,0,0,0,28,29,
+29,30,0,0,0,0,0,0,28,29,
+29,30,0,0,0,0,0,0,28,29,
+29,30,0,0,0,0,0,0,28,29,
+29,30,0,0,0,0,0,0,28,29,
+29,13,12,0,0,0,0,12,11,29,
+29,29,29,30,0,0,28,29,29,29
+</data>
+ </layer>
+ <objectgroup id="7" name="Plant">
+  <object id="7" gid="429" x="71.7348" y="71.4243" width="16" height="16">
+   <properties>
+    <property name="collideSoundEffect" value="Punch2__002"/>
+    <property name="growth" value="0"/>
+    <property name="trigger" value="plant"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="12" name="Sign">
+  <object id="14" gid="68" x="95.9091" y="79.9091" width="16" height="16">
+   <properties>
+    <property name="collideSoundEffect" value="Punch2__002"/>
+    <property name="text">Hello!
+My name is Jordan, and
+ I am a plant. Will you
+ please water me?</property>
+    <property name="trigger" value="readSign"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="14" name="Water">
+  <object id="15" gid="136" x="32.1818" y="112" width="16" height="16">
+   <properties>
+    <property name="collideSoundEffect" value="Punch2__002"/>
+    <property name="text">There looks to be some
+water in the jar.</property>
+    <property name="trigger" value="giveWater,selfDestruct"/>
+    <property name="visible-if" value="!hasFirstWater"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="16" name="Bonus Area"/>
+</map>
