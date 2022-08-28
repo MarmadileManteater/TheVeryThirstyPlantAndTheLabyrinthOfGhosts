@@ -84,7 +84,7 @@ jobs:
       - name: Build the standalone Windows executable
         run: npm run build:electron production ./key.pfx ${{ secrets.KEY_PFX_PASSWORD }}
 
-      - name: Upload Nuget artifact to release
+      - name: Upload standalone executable artifact to release
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
