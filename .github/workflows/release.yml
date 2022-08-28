@@ -91,7 +91,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: dist/dist/The Very Thirsty Plant and the Labyrinth of Ghosts ${{ env.PACKAGE_VERSION }}.exe
-          asset_name: The Very Thirsty Plant and the Labyrinth of Ghosts ${{ env.PACKAGE_VERSION }}-${{ github.run_number }}.exe
+          asset_name: TheVeryThirstyPlantandtheLabyrinthofGhosts.${{ env.PACKAGE_VERSION }}-${{ github.run_number }}.exe
           asset_content_type: application/octet-stream
           
       - name: Publish release in GitHub
