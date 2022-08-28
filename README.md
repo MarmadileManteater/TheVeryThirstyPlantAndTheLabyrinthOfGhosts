@@ -1,7 +1,7 @@
 The Very Thirsty Plant & the Labyrinth of Ghosts
 -------
 
-This game was originally created during Kenney Jam 2022, a 48 hour game jam where you are only allowed to use art assets made by Kenney. The theme of the jam was *Growth*. It has since received updates.
+This game was originally created during Kenney Jam 2022, a 48 hour game jam where you are only allowed to use art assets made by Kenney. The theme of the jam was *Growth*. This game has received updates since the jam.
 
 This was developed using [webpack](https://github.com/webpack/webpack), [knockout](https://github.com/knockout/knockout), and a canvas. Looking back at my bizarre decision to not use a game engine for this game jam, I feel like it was an error. I don't intend to release any major content updates for this game, but I want to maintain it.
 
